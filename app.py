@@ -362,23 +362,29 @@ def transition_shipment(shipment_id: str, to_state, actor=None, **kwargs):
     """
     Transition a shipment AND update the global shipment flow store.
     This ensures all dashboards stay synchronized.
+    
+    ENTERPRISE PATTERN: Transactional state transition with cache invalidation
     """
     # ✅ PRE-CHECK: Prevent redundant transitions (same state → same state)
+    # Use bypass_cache=True to get authoritative state from event store
     try:
-        # Use get_all_shipments_by_state to get current state
-        all_shipments = get_all_shipments_by_state()
+        all_shipments = get_all_shipments_by_state(bypass_cache=True)
         shipment_data = next((s for s in all_shipments if s.get('shipment_id') == shipment_id), None)
         current_state = shipment_data.get('current_state') if shipment_data else None
         target_state_str = str(to_state).split('.')[-1] if '.' in str(to_state) else str(to_state)
         if current_state and current_state == target_state_str:
-            # Already in target state - skip silently (no error)
+            # Already in target state - skip silently (no error, idempotent)
             return {"shipment_id": shipment_id, "state": current_state, "skipped": True}
     except Exception as e:
         # If we can't get state, proceed with transition (let event sourcing handle it)
         pass
     
-    # Call the underlying event sourcing transition
+    # Call the underlying event sourcing transition (atomic operation)
     result = _transition_shipment_internal(shipment_id, to_state, actor, **kwargs)
+    
+    # ✅ CRITICAL: Clear cache IMMEDIATELY after successful transition
+    # This ensures all subsequent reads get fresh data
+    clear_shipment_cache()
     
     # Update the global flow store
     try:
@@ -465,12 +471,28 @@ def get_all_shipments_by_state_cached(state=None):
     """Cached version of get_all_shipments_by_state with 45s TTL - STABLE KEY"""
     return get_event_sourcing()['get_all_shipments_by_state'](state) if state else get_event_sourcing()['get_all_shipments_by_state']()
 
-def get_all_shipments_by_state(state=None, *args, **kwargs):
-    """Get shipments by state with automatic caching - STABLE KEYS"""
-    # ⚡ STAFF+ FIX: Removed time-based version_key that caused constant cache misses
+def get_all_shipments_by_state(state=None, bypass_cache=False, *args, **kwargs):
+    """Get shipments by state with automatic caching - STABLE KEYS
+    
+    Args:
+        state: Filter by specific state (optional)
+        bypass_cache: If True, skip cache and get fresh data from event store
+        *args, **kwargs: Additional arguments passed to event sourcing
+    """
+    # ⚡ STAFF+ FIX: Added bypass_cache for transactional operations
+    if bypass_cache:
+        # Direct call to event sourcing, bypassing cache
+        return get_event_sourcing()['get_all_shipments_by_state'](state) if state else get_event_sourcing()['get_all_shipments_by_state']()
     if args or kwargs:
         return get_event_sourcing()['get_all_shipments_by_state'](state, *args, **kwargs)
     return get_all_shipments_by_state_cached(state)
+
+def clear_shipment_cache():
+    """Clear all shipment-related caches to force fresh data on next read"""
+    try:
+        get_all_shipments_by_state_cached.clear()
+    except Exception:
+        pass  # Cache may not exist yet
 
 def reconstruct_shipment_state(*args, **kwargs):
     return get_event_sourcing()['reconstruct_shipment_state'](*args, **kwargs)
@@ -9188,39 +9210,52 @@ with main_tabs[2]:
                 # Valid flow: IN_TRANSIT → RECEIVER_ACKNOWLEDGED → WAREHOUSE_INTAKE → OUT_FOR_DELIVERY → DELIVERED
                 if selected_status == "IN_TRANSIT":
                     if st.button("✅ Confirm Arrival", use_container_width=True, type="primary", key=f"receiver_ack_{selected}"):
+                        # ═══════════════════════════════════════════════════════════════════════
+                        # TRANSACTIONAL CONFIRM ARRIVAL - Enterprise Pattern
+                        # Single click = Single transition = Deterministic result
+                        # ═══════════════════════════════════════════════════════════════════════
+                        
+                        # Step 1: Get AUTHORITATIVE state from event store (bypass cache)
+                        all_shipments = get_all_shipments_by_state(bypass_cache=True)
+                        shipment_data = next((s for s in all_shipments if s.get('shipment_id') == selected), None)
+                        actual_state = shipment_data.get('current_state', 'UNKNOWN') if shipment_data else 'UNKNOWN'
+                        
+                        # Step 2: Idempotency guard - if already transitioned, just refresh
+                        if actual_state != "IN_TRANSIT":
+                            st.info(f"ℹ️ Shipment {selected} is already {actual_state}. Refreshing...")
+                            st.rerun()
+                        
+                        # Step 3: Execute atomic transition (with built-in cache clearing)
                         try:
-                            # ✅ CRITICAL: Get FRESH state from event sourcing (not from cached list)
-                            all_shipments = get_all_shipments_by_state()
-                            shipment_data = next((s for s in all_shipments if s.get('shipment_id') == selected), None)
-                            actual_state = shipment_data.get('current_state', 'UNKNOWN') if shipment_data else 'UNKNOWN'
+                            result = transition_shipment(
+                                shipment_id=selected,
+                                to_state=EventType.RECEIVER_ACKNOWLEDGED,
+                                actor=Actor.RECEIVER,
+                                acknowledgment_timestamp=datetime.now().isoformat()
+                            )
                             
-                            if actual_state != "IN_TRANSIT":
-                                st.info(f"ℹ️ Shipment {selected} is already {actual_state}. Refreshing...")
-                                st.rerun()
-                            else:
-                                # 1. Transition shipment state
-                                transition_shipment(
-                                    shipment_id=selected,
-                                    to_state=EventType.RECEIVER_ACKNOWLEDGED,
-                                    actor=Actor.RECEIVER,
-                                    acknowledgment_timestamp=datetime.now().isoformat()
-                                )
-                                
-                                # ═══════════════════════════════════════════════════════════════
-                                # 2. 🔔 EVENT 1: SHIPMENT REACHES RECEIVER MANAGER
-                                #    Triggers EXACTLY 2 notifications:
-                                #    ✅ Sender Manager
-                                #    ✅ Sender Supervisor
-                                # ═══════════════════════════════════════════════════════════════
-                                notifications_sent = notify_receiver_manager_received(selected)
-                                
-                                st.success(f"✅ Confirmed: **{selected}**")
-                                st.toast(f"📨 {notifications_sent} notifications sent to: Sender Manager, Sender Supervisor")
-                                st.rerun()
-                        except Exception as e:
-                            # Don't show error for redundant transition - just refresh
-                            if "Invalid transition" in str(e) and "RECEIVER_ACKNOWLEDGED" in str(e):
+                            # Step 4: Check if transition was skipped (idempotent)
+                            if result and result.get('skipped'):
                                 st.info("ℹ️ Already confirmed. Refreshing...")
+                                st.rerun()
+                            
+                            # Step 5: Send notifications (only on successful NEW transition)
+                            notifications_sent = notify_receiver_manager_received(selected)
+                            
+                            # Step 6: Show success feedback
+                            st.success(f"✅ Confirmed: **{selected}**")
+                            st.toast(f"📨 {notifications_sent} notifications sent to: Sender Manager, Sender Supervisor")
+                            
+                            # Step 7: Force immediate UI refresh with fresh data
+                            st.rerun()
+                            
+                        except Exception as e:
+                            # Handle gracefully - likely a race condition
+                            error_msg = str(e)
+                            if "Invalid transition" in error_msg:
+                                # Already transitioned by another process/click - just refresh
+                                clear_shipment_cache()
+                                st.info("ℹ️ Already processed. Refreshing...")
                                 st.rerun()
                             else:
                                 st.error(f"❌ Error: {e}")
