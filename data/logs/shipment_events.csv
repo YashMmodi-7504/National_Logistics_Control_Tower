@@ -1,0 +1,2 @@
+timestamp,shipment_id,event_type,previous_state,new_state,role,metadata
+2026-01-21T17:43:45.200398,SHIP_10002,SHIPMENT_CREATED,NONE,CREATED,SENDER,source=Surat|destination=Delhi|weight=18.8

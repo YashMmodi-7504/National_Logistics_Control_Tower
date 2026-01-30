@@ -1,0 +1,2 @@
+shipment_id,created_at,source,destination,weight_kg,delivery_type,delivery_category
+SHIP_10002,2026-01-21T17:43:45.200398,Surat,Delhi,18.8,NORMAL,Residential

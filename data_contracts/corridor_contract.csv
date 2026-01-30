@@ -1,0 +1,343 @@
+corridor,avg_eta,avg_delay,avg_breach_probability,shipment_count,risk_band
+Andhra Pradesh -> Assam,61.73,3.37,0.247,20,LOW
+Andhra Pradesh -> Bihar,96.45,22.1,0.329,20,LOW
+Andhra Pradesh -> Chhattisgarh,74.1,12.17,0.48,19,MEDIUM
+Andhra Pradesh -> Delhi,53.33,5.0,0.244,20,LOW
+Andhra Pradesh -> Gujarat,86.8,5.21,0.187,48,LOW
+Andhra Pradesh -> Haryana,74.1,6.91,0.207,30,LOW
+Andhra Pradesh -> Jharkhand,88.2,9.47,0.153,24,LOW
+Andhra Pradesh -> Karnataka,92.93,18.54,0.355,50,MEDIUM
+Andhra Pradesh -> Kerala,57.36,19.67,0.624,44,HIGH
+Andhra Pradesh -> Madhya Pradesh,90.37,13.11,0.179,47,LOW
+Andhra Pradesh -> Maharashtra,77.15,13.05,0.497,73,MEDIUM
+Andhra Pradesh -> Odisha,75.28,14.59,0.327,28,LOW
+Andhra Pradesh -> Punjab,59.37,19.74,0.786,44,HIGH
+Andhra Pradesh -> Rajasthan,87.64,8.78,0.24,22,LOW
+Andhra Pradesh -> Tamil Nadu,92.7,12.55,0.121,52,LOW
+Andhra Pradesh -> Telangana,75.28,6.04,0.183,22,LOW
+Andhra Pradesh -> Uttar Pradesh,88.1,8.93,0.195,81,LOW
+Andhra Pradesh -> West Bengal,73.0,12.15,0.318,19,LOW
+Assam -> Andhra Pradesh,74.67,24.22,0.728,29,HIGH
+Assam -> Bihar,75.09,7.35,0.228,18,LOW
+Assam -> Chhattisgarh,66.47,11.9,0.402,8,MEDIUM
+Assam -> Delhi,53.19,3.45,0.144,8,LOW
+Assam -> Gujarat,65.85,11.22,0.387,21,MEDIUM
+Assam -> Haryana,94.36,22.41,0.481,7,MEDIUM
+Assam -> Jharkhand,86.95,7.71,0.221,15,LOW
+Assam -> Karnataka,71.02,6.03,0.242,22,LOW
+Assam -> Kerala,88.53,26.95,0.633,20,HIGH
+Assam -> Madhya Pradesh,65.92,9.46,0.113,30,LOW
+Assam -> Maharashtra,71.26,18.06,0.774,35,HIGH
+Assam -> Odisha,63.15,19.1,0.725,14,HIGH
+Assam -> Punjab,58.13,7.74,0.221,26,LOW
+Assam -> Rajasthan,88.67,9.75,0.207,9,LOW
+Assam -> Tamil Nadu,77.71,4.61,0.178,21,LOW
+Assam -> Telangana,80.73,25.4,0.692,13,HIGH
+Assam -> Uttar Pradesh,48.93,5.79,0.15,34,LOW
+Assam -> West Bengal,67.34,9.32,0.126,8,LOW
+Bihar -> Andhra Pradesh,57.29,13.1,0.443,27,MEDIUM
+Bihar -> Assam,58.75,7.95,0.105,10,LOW
+Bihar -> Chhattisgarh,69.57,17.57,0.653,11,HIGH
+Bihar -> Delhi,95.27,5.87,0.105,12,LOW
+Bihar -> Gujarat,57.46,7.38,0.177,32,LOW
+Bihar -> Haryana,55.36,13.52,0.401,10,MEDIUM
+Bihar -> Jharkhand,92.47,18.9,0.417,11,MEDIUM
+Bihar -> Karnataka,59.91,6.87,0.129,20,LOW
+Bihar -> Kerala,49.71,9.04,0.397,18,MEDIUM
+Bihar -> Madhya Pradesh,73.88,25.12,0.793,27,HIGH
+Bihar -> Maharashtra,58.08,20.19,0.701,38,HIGH
+Bihar -> Odisha,48.58,5.92,0.119,15,LOW
+Bihar -> Punjab,53.3,15.18,0.566,20,MEDIUM
+Bihar -> Rajasthan,82.58,28.24,0.713,16,HIGH
+Bihar -> Tamil Nadu,92.9,27.05,0.656,20,HIGH
+Bihar -> Telangana,62.0,12.13,0.388,12,MEDIUM
+Bihar -> Uttar Pradesh,74.72,11.06,0.116,36,LOW
+Bihar -> West Bengal,76.13,9.86,0.235,14,LOW
+Chhattisgarh -> Andhra Pradesh,92.83,20.67,0.477,23,MEDIUM
+Chhattisgarh -> Assam,86.16,7.16,0.139,13,LOW
+Chhattisgarh -> Bihar,62.82,5.01,0.185,8,LOW
+Chhattisgarh -> Delhi,58.19,14.17,0.462,10,MEDIUM
+Chhattisgarh -> Gujarat,96.07,14.87,0.415,25,MEDIUM
+Chhattisgarh -> Haryana,79.5,17.75,0.403,13,MEDIUM
+Chhattisgarh -> Jharkhand,68.95,18.86,0.676,9,HIGH
+Chhattisgarh -> Karnataka,87.72,27.26,0.688,22,HIGH
+Chhattisgarh -> Kerala,73.26,13.49,0.353,28,MEDIUM
+Chhattisgarh -> Madhya Pradesh,64.49,6.46,0.113,18,LOW
+Chhattisgarh -> Maharashtra,64.45,12.68,0.372,33,MEDIUM
+Chhattisgarh -> Odisha,63.25,8.79,0.183,10,LOW
+Chhattisgarh -> Punjab,83.03,11.42,0.133,18,LOW
+Chhattisgarh -> Rajasthan,66.98,14.68,0.353,12,MEDIUM
+Chhattisgarh -> Tamil Nadu,61.34,14.31,0.324,27,LOW
+Chhattisgarh -> Telangana,77.13,21.63,0.64,6,HIGH
+Chhattisgarh -> Uttar Pradesh,73.3,13.04,0.379,36,MEDIUM
+Chhattisgarh -> West Bengal,87.53,9.31,0.139,13,LOW
+Delhi -> Andhra Pradesh,85.14,26.35,0.7,22,HIGH
+Delhi -> Assam,93.82,29.64,0.638,11,HIGH
+Delhi -> Bihar,85.07,13.98,0.375,21,MEDIUM
+Delhi -> Chhattisgarh,48.39,7.23,0.146,11,LOW
+Delhi -> Gujarat,77.01,17.25,0.495,27,MEDIUM
+Delhi -> Haryana,96.12,26.0,0.584,17,MEDIUM
+Delhi -> Jharkhand,62.18,7.32,0.203,7,LOW
+Delhi -> Karnataka,85.04,4.78,0.187,31,LOW
+Delhi -> Kerala,86.74,4.61,0.155,27,LOW
+Delhi -> Madhya Pradesh,50.19,5.34,0.185,24,LOW
+Delhi -> Maharashtra,80.7,6.06,0.151,42,LOW
+Delhi -> Odisha,68.31,23.05,0.627,19,HIGH
+Delhi -> Punjab,79.45,10.75,0.178,32,LOW
+Delhi -> Rajasthan,59.35,15.23,0.565,16,MEDIUM
+Delhi -> Tamil Nadu,94.96,6.1,0.111,23,LOW
+Delhi -> Telangana,55.83,3.14,0.178,17,LOW
+Delhi -> Uttar Pradesh,81.67,28.46,0.753,35,HIGH
+Delhi -> West Bengal,63.42,22.11,0.569,9,MEDIUM
+Gujarat -> Andhra Pradesh,70.26,21.71,0.731,50,HIGH
+Gujarat -> Assam,73.97,9.72,0.199,20,LOW
+Gujarat -> Bihar,87.48,11.67,0.231,30,LOW
+Gujarat -> Chhattisgarh,48.72,5.9,0.128,18,LOW
+Gujarat -> Delhi,49.07,5.0,0.11,29,LOW
+Gujarat -> Haryana,58.07,9.55,0.331,31,LOW
+Gujarat -> Jharkhand,66.36,5.8,0.187,23,LOW
+Gujarat -> Karnataka,81.08,7.92,0.129,37,LOW
+Gujarat -> Kerala,72.08,18.58,0.737,39,HIGH
+Gujarat -> Madhya Pradesh,91.18,5.72,0.163,49,LOW
+Gujarat -> Maharashtra,62.13,15.47,0.445,61,MEDIUM
+Gujarat -> Odisha,54.94,10.45,0.466,21,MEDIUM
+Gujarat -> Punjab,81.27,5.09,0.247,55,LOW
+Gujarat -> Rajasthan,90.82,6.54,0.196,24,LOW
+Gujarat -> Tamil Nadu,72.3,16.6,0.381,44,MEDIUM
+Gujarat -> Telangana,77.04,5.74,0.246,27,LOW
+Gujarat -> Uttar Pradesh,50.48,14.69,0.553,72,MEDIUM
+Gujarat -> West Bengal,48.62,3.74,0.245,22,LOW
+Haryana -> Andhra Pradesh,79.09,14.26,0.371,28,MEDIUM
+Haryana -> Assam,63.43,15.13,0.479,8,MEDIUM
+Haryana -> Bihar,74.62,12.94,0.396,14,MEDIUM
+Haryana -> Chhattisgarh,77.66,27.15,0.78,14,HIGH
+Haryana -> Delhi,48.19,12.08,0.771,15,HIGH
+Haryana -> Gujarat,61.75,19.2,0.783,15,HIGH
+Haryana -> Jharkhand,82.4,10.19,0.224,10,LOW
+Haryana -> Karnataka,49.27,15.03,0.625,22,HIGH
+Haryana -> Kerala,80.1,14.59,0.431,16,MEDIUM
+Haryana -> Madhya Pradesh,62.63,11.42,0.463,19,MEDIUM
+Haryana -> Maharashtra,64.01,14.03,0.369,41,MEDIUM
+Haryana -> Odisha,74.78,4.11,0.1,7,LOW
+Haryana -> Punjab,50.13,13.92,0.646,22,HIGH
+Haryana -> Rajasthan,51.85,12.64,0.458,12,MEDIUM
+Haryana -> Tamil Nadu,81.06,23.63,0.573,22,MEDIUM
+Haryana -> Telangana,94.48,12.03,0.134,12,LOW
+Haryana -> Uttar Pradesh,53.14,16.53,0.625,36,HIGH
+Haryana -> West Bengal,67.37,8.62,0.164,17,LOW
+Jharkhand -> Andhra Pradesh,75.41,8.25,0.102,22,LOW
+Jharkhand -> Assam,72.58,8.88,0.145,13,LOW
+Jharkhand -> Bihar,95.77,23.21,0.424,12,MEDIUM
+Jharkhand -> Chhattisgarh,64.83,13.07,0.311,22,LOW
+Jharkhand -> Delhi,69.0,7.13,0.124,13,LOW
+Jharkhand -> Gujarat,86.89,8.81,0.213,19,LOW
+Jharkhand -> Haryana,58.94,17.86,0.673,12,HIGH
+Jharkhand -> Karnataka,50.17,15.25,0.71,18,HIGH
+Jharkhand -> Kerala,79.7,13.84,0.475,27,MEDIUM
+Jharkhand -> Madhya Pradesh,96.46,15.95,0.364,15,MEDIUM
+Jharkhand -> Maharashtra,79.44,10.08,0.104,42,LOW
+Jharkhand -> Odisha,51.62,17.8,0.664,14,HIGH
+Jharkhand -> Punjab,95.67,33.14,0.687,20,HIGH
+Jharkhand -> Rajasthan,50.18,13.18,0.585,9,MEDIUM
+Jharkhand -> Tamil Nadu,70.36,23.03,0.714,20,HIGH
+Jharkhand -> Telangana,50.44,6.52,0.171,11,LOW
+Jharkhand -> Uttar Pradesh,63.6,21.9,0.573,32,MEDIUM
+Jharkhand -> West Bengal,67.77,12.47,0.324,10,LOW
+Karnataka -> Andhra Pradesh,74.98,6.4,0.118,52,LOW
+Karnataka -> Assam,59.35,15.17,0.701,22,HIGH
+Karnataka -> Bihar,52.14,5.92,0.24,20,LOW
+Karnataka -> Chhattisgarh,56.78,16.94,0.573,25,MEDIUM
+Karnataka -> Delhi,77.14,14.87,0.369,16,MEDIUM
+Karnataka -> Gujarat,58.29,4.45,0.134,58,LOW
+Karnataka -> Haryana,93.59,16.86,0.338,23,LOW
+Karnataka -> Jharkhand,72.33,23.39,0.681,28,HIGH
+Karnataka -> Kerala,68.37,10.61,0.321,58,LOW
+Karnataka -> Madhya Pradesh,90.5,25.58,0.585,41,MEDIUM
+Karnataka -> Maharashtra,54.12,17.48,0.644,68,HIGH
+Karnataka -> Odisha,56.27,10.81,0.447,17,MEDIUM
+Karnataka -> Punjab,96.24,15.61,0.379,49,MEDIUM
+Karnataka -> Rajasthan,88.96,16.7,0.431,25,MEDIUM
+Karnataka -> Tamil Nadu,88.44,8.56,0.116,53,LOW
+Karnataka -> Telangana,77.2,3.92,0.168,21,LOW
+Karnataka -> Uttar Pradesh,53.41,4.63,0.156,75,LOW
+Karnataka -> West Bengal,71.16,10.41,0.154,27,LOW
+Kerala -> Andhra Pradesh,65.8,7.1,0.113,48,LOW
+Kerala -> Assam,53.14,8.89,0.315,21,LOW
+Kerala -> Bihar,73.19,7.32,0.222,23,LOW
+Kerala -> Chhattisgarh,84.86,14.58,0.302,20,LOW
+Kerala -> Delhi,63.3,6.73,0.182,11,LOW
+Kerala -> Gujarat,48.11,13.25,0.661,52,HIGH
+Kerala -> Haryana,60.19,12.1,0.329,23,LOW
+Kerala -> Jharkhand,84.37,24.17,0.715,26,HIGH
+Kerala -> Karnataka,85.84,7.84,0.153,45,LOW
+Kerala -> Madhya Pradesh,87.35,15.34,0.469,38,MEDIUM
+Kerala -> Maharashtra,91.81,11.96,0.214,80,LOW
+Kerala -> Odisha,59.23,10.95,0.481,25,MEDIUM
+Kerala -> Punjab,90.35,28.46,0.681,53,HIGH
+Kerala -> Rajasthan,66.94,3.4,0.221,25,LOW
+Kerala -> Tamil Nadu,57.98,15.78,0.69,47,HIGH
+Kerala -> Telangana,70.3,11.7,0.339,24,LOW
+Kerala -> Uttar Pradesh,70.38,15.6,0.374,73,MEDIUM
+Kerala -> West Bengal,63.06,5.95,0.184,27,LOW
+Madhya Pradesh -> Andhra Pradesh,86.06,17.29,0.492,46,MEDIUM
+Madhya Pradesh -> Assam,52.91,7.6,0.102,25,LOW
+Madhya Pradesh -> Bihar,87.76,28.15,0.744,24,HIGH
+Madhya Pradesh -> Chhattisgarh,82.37,14.14,0.442,15,MEDIUM
+Madhya Pradesh -> Delhi,61.45,20.25,0.692,24,HIGH
+Madhya Pradesh -> Gujarat,91.01,24.35,0.682,37,HIGH
+Madhya Pradesh -> Haryana,57.42,10.14,0.38,20,MEDIUM
+Madhya Pradesh -> Jharkhand,89.88,9.87,0.209,21,LOW
+Madhya Pradesh -> Karnataka,78.55,22.63,0.639,51,HIGH
+Madhya Pradesh -> Kerala,95.68,25.25,0.672,52,HIGH
+Madhya Pradesh -> Maharashtra,63.58,14.89,0.307,71,LOW
+Madhya Pradesh -> Odisha,72.46,24.41,0.696,24,HIGH
+Madhya Pradesh -> Punjab,53.42,6.38,0.134,46,LOW
+Madhya Pradesh -> Rajasthan,68.66,9.51,0.107,25,LOW
+Madhya Pradesh -> Tamil Nadu,73.62,13.76,0.395,37,MEDIUM
+Madhya Pradesh -> Telangana,67.48,21.33,0.562,19,MEDIUM
+Madhya Pradesh -> Uttar Pradesh,96.72,15.12,0.395,79,MEDIUM
+Madhya Pradesh -> West Bengal,56.37,13.43,0.5,23,MEDIUM
+Maharashtra -> Andhra Pradesh,71.59,10.7,0.142,64,LOW
+Maharashtra -> Assam,67.55,18.9,0.671,43,HIGH
+Maharashtra -> Bihar,67.93,5.69,0.209,39,LOW
+Maharashtra -> Chhattisgarh,54.87,10.86,0.326,29,LOW
+Maharashtra -> Delhi,50.49,8.47,0.313,41,LOW
+Maharashtra -> Gujarat,73.91,9.83,0.151,87,LOW
+Maharashtra -> Haryana,67.41,9.41,0.131,40,LOW
+Maharashtra -> Jharkhand,71.84,10.37,0.215,36,LOW
+Maharashtra -> Karnataka,87.4,26.28,0.642,82,HIGH
+Maharashtra -> Kerala,72.73,23.21,0.677,65,HIGH
+Maharashtra -> Madhya Pradesh,84.2,14.23,0.375,63,MEDIUM
+Maharashtra -> Odisha,49.98,13.06,0.67,31,HIGH
+Maharashtra -> Punjab,55.11,7.42,0.137,91,LOW
+Maharashtra -> Rajasthan,65.38,6.28,0.175,48,LOW
+Maharashtra -> Tamil Nadu,70.55,22.94,0.687,68,HIGH
+Maharashtra -> Telangana,57.79,19.07,0.705,40,HIGH
+Maharashtra -> Uttar Pradesh,92.0,11.96,0.125,114,LOW
+Maharashtra -> West Bengal,54.33,2.74,0.118,33,LOW
+Odisha -> Andhra Pradesh,72.43,23.59,0.784,19,HIGH
+Odisha -> Assam,54.47,16.8,0.742,12,HIGH
+Odisha -> Bihar,70.19,11.77,0.383,12,MEDIUM
+Odisha -> Chhattisgarh,51.26,10.91,0.391,13,MEDIUM
+Odisha -> Delhi,77.32,21.84,0.566,8,MEDIUM
+Odisha -> Gujarat,57.48,19.09,0.727,23,HIGH
+Odisha -> Haryana,74.42,11.37,0.498,12,MEDIUM
+Odisha -> Jharkhand,61.56,7.47,0.243,12,LOW
+Odisha -> Karnataka,84.14,26.39,0.723,19,HIGH
+Odisha -> Kerala,82.76,18.74,0.369,19,MEDIUM
+Odisha -> Madhya Pradesh,92.28,16.86,0.371,33,MEDIUM
+Odisha -> Maharashtra,86.98,5.05,0.176,22,LOW
+Odisha -> Punjab,76.11,11.64,0.358,24,MEDIUM
+Odisha -> Rajasthan,84.82,12.88,0.346,5,LOW
+Odisha -> Tamil Nadu,55.24,14.4,0.753,30,HIGH
+Odisha -> Telangana,70.08,5.95,0.175,10,LOW
+Odisha -> Uttar Pradesh,59.62,9.79,0.398,30,MEDIUM
+Odisha -> West Bengal,82.3,5.52,0.147,10,LOW
+Punjab -> Andhra Pradesh,59.93,15.12,0.667,50,HIGH
+Punjab -> Assam,51.21,9.53,0.398,25,MEDIUM
+Punjab -> Bihar,77.31,11.47,0.17,31,LOW
+Punjab -> Chhattisgarh,56.56,6.11,0.2,19,LOW
+Punjab -> Delhi,95.96,18.09,0.309,21,LOW
+Punjab -> Gujarat,75.07,7.71,0.149,49,LOW
+Punjab -> Haryana,82.21,16.32,0.313,18,LOW
+Punjab -> Jharkhand,75.75,21.88,0.589,22,MEDIUM
+Punjab -> Karnataka,83.85,15.92,0.498,36,MEDIUM
+Punjab -> Kerala,53.31,18.46,0.767,53,HIGH
+Punjab -> Madhya Pradesh,74.2,13.79,0.381,33,MEDIUM
+Punjab -> Maharashtra,66.46,19.98,0.607,73,HIGH
+Punjab -> Odisha,60.27,18.19,0.759,24,HIGH
+Punjab -> Rajasthan,60.18,4.84,0.188,21,LOW
+Punjab -> Tamil Nadu,62.29,8.27,0.17,56,LOW
+Punjab -> Telangana,93.9,7.06,0.154,29,LOW
+Punjab -> Uttar Pradesh,67.88,21.78,0.763,78,HIGH
+Punjab -> West Bengal,72.77,16.89,0.443,15,MEDIUM
+Rajasthan -> Andhra Pradesh,88.37,26.2,0.62,19,HIGH
+Rajasthan -> Assam,64.4,15.28,0.424,16,MEDIUM
+Rajasthan -> Bihar,96.07,26.19,0.566,15,MEDIUM
+Rajasthan -> Chhattisgarh,88.27,5.74,0.117,11,LOW
+Rajasthan -> Delhi,71.79,16.42,0.405,16,MEDIUM
+Rajasthan -> Gujarat,71.75,23.78,0.638,29,HIGH
+Rajasthan -> Haryana,70.34,18.81,0.701,15,HIGH
+Rajasthan -> Jharkhand,76.12,5.92,0.227,14,LOW
+Rajasthan -> Karnataka,64.08,12.89,0.391,25,MEDIUM
+Rajasthan -> Kerala,66.62,13.87,0.477,20,MEDIUM
+Rajasthan -> Madhya Pradesh,76.31,21.63,0.587,21,MEDIUM
+Rajasthan -> Maharashtra,53.91,17.85,0.565,48,MEDIUM
+Rajasthan -> Odisha,65.04,22.63,0.738,10,HIGH
+Rajasthan -> Punjab,82.76,10.05,0.229,25,LOW
+Rajasthan -> Tamil Nadu,78.5,13.01,0.331,28,LOW
+Rajasthan -> Telangana,57.63,19.61,0.775,12,HIGH
+Rajasthan -> Uttar Pradesh,72.1,12.49,0.325,33,LOW
+Rajasthan -> West Bengal,83.45,9.87,0.179,12,LOW
+Tamil Nadu -> Andhra Pradesh,70.62,22.08,0.599,51,MEDIUM
+Tamil Nadu -> Assam,79.85,15.33,0.379,20,MEDIUM
+Tamil Nadu -> Bihar,71.99,5.26,0.206,23,LOW
+Tamil Nadu -> Chhattisgarh,58.51,6.85,0.136,18,LOW
+Tamil Nadu -> Delhi,92.67,24.98,0.79,24,HIGH
+Tamil Nadu -> Gujarat,73.22,9.55,0.109,49,LOW
+Tamil Nadu -> Haryana,85.11,22.88,0.577,24,MEDIUM
+Tamil Nadu -> Jharkhand,78.86,23.39,0.558,22,MEDIUM
+Tamil Nadu -> Karnataka,88.01,16.16,0.483,41,MEDIUM
+Tamil Nadu -> Kerala,91.42,5.59,0.169,47,LOW
+Tamil Nadu -> Madhya Pradesh,76.15,8.46,0.144,44,LOW
+Tamil Nadu -> Maharashtra,79.75,22.31,0.695,75,HIGH
+Tamil Nadu -> Odisha,94.7,16.16,0.416,16,MEDIUM
+Tamil Nadu -> Punjab,78.37,15.72,0.452,44,MEDIUM
+Tamil Nadu -> Rajasthan,69.96,23.2,0.614,22,HIGH
+Tamil Nadu -> Telangana,87.79,4.85,0.199,19,LOW
+Tamil Nadu -> Uttar Pradesh,50.8,5.61,0.188,68,LOW
+Tamil Nadu -> West Bengal,67.21,12.46,0.452,25,MEDIUM
+Telangana -> Andhra Pradesh,65.84,16.63,0.789,20,HIGH
+Telangana -> Assam,83.67,23.01,0.616,9,HIGH
+Telangana -> Bihar,69.79,19.92,0.558,9,MEDIUM
+Telangana -> Chhattisgarh,81.73,10.93,0.147,13,LOW
+Telangana -> Delhi,72.5,4.8,0.13,12,LOW
+Telangana -> Gujarat,55.16,7.33,0.245,20,LOW
+Telangana -> Haryana,54.15,3.69,0.244,12,LOW
+Telangana -> Jharkhand,94.85,22.17,0.318,6,LOW
+Telangana -> Karnataka,77.95,5.49,0.106,18,LOW
+Telangana -> Kerala,62.61,14.71,0.404,33,MEDIUM
+Telangana -> Madhya Pradesh,49.05,2.55,0.186,18,LOW
+Telangana -> Maharashtra,76.04,9.31,0.228,37,LOW
+Telangana -> Odisha,74.09,25.93,0.679,17,HIGH
+Telangana -> Punjab,80.29,7.6,0.217,15,LOW
+Telangana -> Rajasthan,62.13,10.17,0.406,12,MEDIUM
+Telangana -> Tamil Nadu,65.58,12.21,0.381,19,MEDIUM
+Telangana -> Uttar Pradesh,90.88,7.83,0.118,44,LOW
+Telangana -> West Bengal,71.64,11.87,0.444,15,MEDIUM
+Uttar Pradesh -> Andhra Pradesh,59.06,13.66,0.432,80,MEDIUM
+Uttar Pradesh -> Assam,75.39,16.15,0.371,38,MEDIUM
+Uttar Pradesh -> Bihar,53.89,15.42,0.733,26,HIGH
+Uttar Pradesh -> Chhattisgarh,53.92,15.27,0.761,35,HIGH
+Uttar Pradesh -> Delhi,69.79,14.07,0.334,32,LOW
+Uttar Pradesh -> Gujarat,67.72,19.94,0.66,65,HIGH
+Uttar Pradesh -> Haryana,71.76,22.56,0.659,48,HIGH
+Uttar Pradesh -> Jharkhand,59.11,3.43,0.242,41,LOW
+Uttar Pradesh -> Karnataka,95.27,16.94,0.489,83,MEDIUM
+Uttar Pradesh -> Kerala,72.22,8.44,0.152,64,LOW
+Uttar Pradesh -> Madhya Pradesh,48.59,11.87,0.424,84,MEDIUM
+Uttar Pradesh -> Maharashtra,95.38,9.27,0.125,113,LOW
+Uttar Pradesh -> Odisha,73.64,4.62,0.137,40,LOW
+Uttar Pradesh -> Punjab,86.04,19.67,0.321,67,LOW
+Uttar Pradesh -> Rajasthan,48.14,11.03,0.312,36,LOW
+Uttar Pradesh -> Tamil Nadu,66.71,10.39,0.435,83,MEDIUM
+Uttar Pradesh -> Telangana,59.36,11.07,0.339,25,LOW
+Uttar Pradesh -> West Bengal,74.47,18.41,0.427,29,MEDIUM
+West Bengal -> Andhra Pradesh,76.5,14.22,0.477,26,MEDIUM
+West Bengal -> Assam,58.87,3.77,0.168,7,LOW
+West Bengal -> Bihar,77.65,26.18,0.726,13,HIGH
+West Bengal -> Chhattisgarh,50.28,11.87,0.397,14,MEDIUM
+West Bengal -> Delhi,88.64,26.38,0.68,16,HIGH
+West Bengal -> Gujarat,65.97,7.29,0.144,29,LOW
+West Bengal -> Haryana,63.46,16.92,0.629,10,HIGH
+West Bengal -> Jharkhand,56.54,7.19,0.108,13,LOW
+West Bengal -> Karnataka,60.09,12.58,0.307,20,LOW
+West Bengal -> Kerala,66.56,16.24,0.333,44,LOW
+West Bengal -> Madhya Pradesh,67.05,20.04,0.77,28,HIGH
+West Bengal -> Maharashtra,69.25,9.35,0.186,30,LOW
+West Bengal -> Odisha,82.39,8.62,0.125,11,LOW
+West Bengal -> Punjab,76.22,25.74,0.57,25,MEDIUM
+West Bengal -> Rajasthan,95.41,21.81,0.344,10,LOW
+West Bengal -> Tamil Nadu,73.93,19.48,0.742,18,HIGH
+West Bengal -> Telangana,53.09,16.12,0.763,6,HIGH
+West Bengal -> Uttar Pradesh,77.02,8.6,0.2,25,LOW

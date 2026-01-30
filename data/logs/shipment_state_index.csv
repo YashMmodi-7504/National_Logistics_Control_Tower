@@ -1,0 +1,2 @@
+shipment_id,current_state,last_event_time,source,destination,weight_kg,delivery_type,override_status,override_reason
+SHIP_10002,CREATED,2026-01-21T17:43:45.200398,Surat,Delhi,18.8,NORMAL,NONE,
